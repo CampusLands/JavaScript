@@ -15,6 +15,12 @@ export const getAllClientsFromCityAndCode = async()=>{
     clientUpdate = data.filter(val => val.code_employee_sales_manager == 11 || val.code_employee_sales_manager == 30);
     return clientUpdate
 }
+// 6. Devuelve un listado con el nombre de todos los clientes españoles.
+export const getAllSpanishClients = async() => {
+    let res = await fetch("http://localhost:5501/clients?country=Spain")
+    let client = await res.json();
+    return client
+}
 
 // Consultas multitabla
 // 7. Devuelve el nombre de los clientes y el nombre de sus representantes
