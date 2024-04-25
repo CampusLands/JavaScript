@@ -15,6 +15,7 @@ export const getAllClientsFromCityAndCode = async()=>{
     clientUpdate = data.filter(val => val.code_employee_sales_manager == 11 || val.code_employee_sales_manager == 30);
     return clientUpdate
 }
+
 // Consultas multitabla
 // 7. Devuelve el nombre de los clientes y el nombre de sus representantes
 // junto con la ciudad de la oficina a la que pertenece el representante.
